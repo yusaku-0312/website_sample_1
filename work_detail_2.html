@@ -17,13 +17,11 @@
         .case-hero {
             position: relative;
             height: 85vh;
-            /* Taller, more immersive */
             min-height: 600px;
             background-color: var(--c-charcoal);
             overflow: hidden;
             display: flex;
             align-items: flex-end;
-            /* Bottom align text for cinema feel */
             padding-bottom: 80px;
         }
 
@@ -34,7 +32,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.7;
             /* Gentle zoom effect */
             animation: zoomIn 20s infinite alternate;
         }
@@ -45,19 +42,26 @@
             }
         }
 
+        /* Visibility Improvement: White Semi-transparent Box */
         .case-hero-content {
             position: relative;
             z-index: 1;
-            color: #fff;
+            /* White background with 50% opacity as requested */
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            /* Dark text for contrast */
+            color: var(--c-midnight-blue);
             max-width: 900px;
-            padding: 0 40px;
-            /* Asymmetric padding */
+            padding: 40px;
+            margin-left: 5%;
+            /* Asymmetric placement */
+            border-radius: 4px;
         }
 
         .case-tag {
-            background: #fff;
-            color: var(--c-charcoal);
-            /* High contrast, stark */
+            background: var(--c-midnight-blue);
+            /* Inverted for contrast */
+            color: #fff;
             padding: 4px 12px;
             font-size: 0.75rem;
             font-weight: 700;
@@ -69,22 +73,24 @@
 
         .case-hero-title {
             font-family: "Times New Roman", "YuMincho", serif;
-            /* Serif for editorial vibe */
             font-size: 4rem;
             font-weight: 500;
             line-height: 1.1;
             margin-bottom: 32px;
             letter-spacing: -0.02em;
+            color: var(--c-midnight-blue);
+            /* Ensure dark color */
         }
 
         .case-hero-meta {
             display: flex;
             gap: 32px;
             font-size: 0.9rem;
-            opacity: 0.8;
             font-family: monospace;
-            /* Raw data feel */
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--c-charcoal);
+            /* Ensure dark color */
+            border-top: 1px solid var(--c-charcoal);
+            /* Dark border */
             padding-top: 24px;
         }
 
@@ -94,7 +100,6 @@
             padding: 100px 0;
         }
 
-        /* "Raw Spec Sheet" look for data */
         .spec-sheet {
             font-family: monospace;
             background: #F8F8F8;
@@ -119,11 +124,9 @@
             font-weight: 700;
         }
 
-        /* Narrative Block - Narrow column for reading */
         .narrative-block {
             max-width: 680px;
             margin-left: auto;
-            /* Right aligned - breaking center symmetry */
             margin-right: 10%;
             margin-bottom: 120px;
         }
@@ -151,7 +154,6 @@
             color: var(--c-midnight-blue);
         }
 
-        /* Visual Break */
         .visual-break {
             width: 100vw;
             margin-left: calc(50% - 50vw);
@@ -160,7 +162,6 @@
             margin-bottom: 120px;
         }
 
-        /* "The Struggle" - Specific, honest section */
         .struggle-section {
             background: #111;
             color: #ddd;
@@ -186,7 +187,6 @@
             line-height: 1.8;
         }
 
-        /* Impact - Big Typos */
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -211,14 +211,30 @@
             margin-top: 8px;
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .case-hero {
                 height: 70vh;
                 padding-bottom: 40px;
             }
 
+            .case-hero-content {
+                width: 100%;
+                margin-left: 0;
+                padding: 24px;
+                background-color: rgba(255, 255, 255, 0.7);
+                /* Slightly more opaque on mobile for better read */
+            }
+
             .case-hero-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                word-break: break-all;
+                /* Prevent overflow */
+            }
+
+            .case-hero-meta {
+                flex-direction: column;
+                gap: 8px;
             }
 
             .narrative-block {
@@ -231,12 +247,27 @@
                 gap: 40px;
             }
 
+            .impact-num {
+                font-size: 4rem;
+            }
+
             .spec-sheet {
                 padding: 24px;
             }
 
+            .spec-row {
+                grid-template-columns: 1fr;
+                /* Stack label and val on very small screens if needed, or keep ratio */
+                grid-template-columns: 100px 1fr;
+            }
+
             .struggle-section {
                 padding: 40px 24px;
+            }
+
+            .visual-break {
+                height: 300px;
+                margin-bottom: 60px;
             }
         }
     </style>
@@ -394,6 +425,8 @@
                     <ul>
                         <li><a href="services.html">サービス</a></li>
                         <li><a href="works.html">実績</a></li>
+                        <li><a href="process.html">進め方</a></li>
+                        <li><a href="pricing.html">料金</a></li>
                         <li><a href="about.html">会社概要</a></li>
                         <li><a href="privacy.html">プライバシーポリシー</a></li>
                     </ul>
