@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+/* Page Header */
+.page-header-contact {
+    background-color: var(--color-midnight);
+    padding: 120px 0 60px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.page-title-contact {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.page-subtitle-contact {
+    color: var(--color-slate);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+/* Contact Main Area */
+.contact-main {
+    padding: 80px 0;
+    background-color: var(--color-ivory);
+}
+
+.contact-card {
+    background: var(--color-white);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-message {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.contact-form-wrapper {
+    text-align: center;
+    overflow: hidden;
+}
+
+.contact-form-iframe {
+    max-width: 640px;
+    border: none;
+    width: 100%;
+}
+
+/* Contact Thanks */
+.thanks-main {
+    padding: 160px 0 120px;
+    background-color: var(--color-ivory);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.thanks-card {
+    background: var(--color-white);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.thanks-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.thanks-title {
+    font-size: 1.5rem;
+    color: var(--color-midnight);
+    margin-bottom: 24px;
+}
+
+.thanks-text {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+}

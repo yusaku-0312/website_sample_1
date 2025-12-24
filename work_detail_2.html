@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新コスメブランド「LUMIERE」ローンチイベント | 株式会社ハレトキ・イベントデザイン</title>
+    <meta name="description" content="新コスメブランド「LUMIERE」のローンチイベント実績。原宿でのPOPUPストア展開とSNS連動施策で、若年層へのリーチを最大化しました。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <style>
+        /* Pattern 2: "No AI Feel" - Editorial & Raw Documentary Style */
+
+        /* Editorial Typography Overlay */
+        .case-hero {
+            position: relative;
+            height: 85vh;
+            /* Taller, more immersive */
+            min-height: 600px;
+            background-color: var(--c-charcoal);
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            /* Bottom align text for cinema feel */
+            padding-bottom: 80px;
+        }
+
+        .case-hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            /* Gentle zoom effect */
+            animation: zoomIn 20s infinite alternate;
+        }
+
+        @keyframes zoomIn {
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .case-hero-content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            max-width: 900px;
+            padding: 0 40px;
+            /* Asymmetric padding */
+        }
+
+        .case-tag {
+            background: #fff;
+            color: var(--c-charcoal);
+            /* High contrast, stark */
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .case-hero-title {
+            font-family: "Times New Roman", "YuMincho", serif;
+            /* Serif for editorial vibe */
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        .case-hero-meta {
+            display: flex;
+            gap: 32px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-family: monospace;
+            /* Raw data feel */
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 24px;
+        }
+
+        /* Asymmetric Layout */
+        .case-body {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        /* "Raw Spec Sheet" look for data */
+        .spec-sheet {
+            font-family: monospace;
+            background: #F8F8F8;
+            padding: 40px;
+            margin-bottom: 80px;
+            border-left: 2px solid var(--c-midnight-blue);
+        }
+
+        .spec-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        .spec-label {
+            color: var(--c-slate-gray);
+        }
+
+        .spec-val {
+            color: var(--c-charcoal);
+            font-weight: 700;
+        }
+
+        /* Narrative Block - Narrow column for reading */
+        .narrative-block {
+            max-width: 680px;
+            margin-left: auto;
+            /* Right aligned - breaking center symmetry */
+            margin-right: 10%;
+            margin-bottom: 120px;
+        }
+
+        .narrative-title {
+            font-family: "Times New Roman", "YuMincho", serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        .narrative-text p {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 32px;
+            color: #444;
+        }
+
+        .pull-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            border-left: 4px solid var(--c-muted-amber);
+            padding-left: 24px;
+            margin: 40px 0;
+            color: var(--c-midnight-blue);
+        }
+
+        /* Visual Break */
+        .visual-break {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            height: 600px;
+            object-fit: cover;
+            margin-bottom: 120px;
+        }
+
+        /* "The Struggle" - Specific, honest section */
+        .struggle-section {
+            background: #111;
+            color: #ddd;
+            padding: 80px;
+            margin-bottom: 120px;
+            position: relative;
+        }
+
+        .struggle-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .struggle-title {
+            font-family: monospace;
+            color: var(--c-muted-amber);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        .struggle-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Impact - Big Typos */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            align-items: center;
+        }
+
+        .impact-num {
+            font-size: 6rem;
+            line-height: 1;
+            font-weight: 700;
+            font-family: "Times New Roman", serif;
+            color: var(--c-midnight-blue);
+            display: block;
+        }
+
+        .impact-label {
+            font-size: 1rem;
+            color: var(--c-slate-gray);
+            font-family: monospace;
+            display: block;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .case-hero {
+                height: 70vh;
+                padding-bottom: 40px;
+            }
+
+            .case-hero-title {
+                font-size: 2.5rem;
+            }
+
+            .narrative-block {
+                margin-right: auto;
+                padding: 0 24px;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .spec-sheet {
+                padding: 24px;
+            }
+
+            .struggle-section {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same) -->
+    <header class="header">
+        <div class="l-container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="company_logo.png" alt="HARETOKI">
+            </a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="process.html">進め方</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="height: 40px; padding: 0 20px; font-size: 14px;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero: Immersive, Cinematic, Serif -->
+        <div class="case-hero">
+            <img src="assets/img/work02_thumb.jpg" alt="LUMIERE Launch">
+            <div class="case-hero-content">
+                <span class="case-tag">PROMOTION A-04</span>
+                <h1 class="case-hero-title">「映え」のその先へ。<br>熱狂を作る空間設計。</h1>
+                <div class="case-hero-meta">
+                    <span>CLIENT: Beauty Tech Inc.</span>
+                    <span>LOC: Harajuku, Tokyo</span>
+                    <span>YEAR: 2024</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-body">
+            <div class="l-container">
+
+                <!-- Raw Spec Sheet (Not just a grid) -->
+                <div class="spec-sheet">
+                    <div class="spec-row">
+                        <span class="spec-label">PROJECT</span>
+                        <span class="spec-val">LUMIERE Brand Launch POPUP</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">MISSION</span>
+                        <span class="spec-val">Z世代への認知拡大・「世界観」の刷り込み</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">KPI</span>
+                        <span class="spec-val">Instagram UGC生成数 3,000件</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">TEAM</span>
+                        <span class="spec-val">CD: S.Tanaka / AD: Y.Suzuki / PM: K.Sato</span>
+                    </div>
+                </div>
+
+                <!-- Narrative -->
+                <div class="narrative-block">
+                    <h2 class="narrative-title">なぜ、今さら<br>リアルイベントなのか？</h2>
+                    <div class="narrative-text">
+                        <p>
+                            デジタルネイティブであるZ世代に向けたコスメブランド「LUMIERE」。
+                            一見、デジタル広告への投資が最適解に見えるこのプロジェクトで、私たちが提案したのは「圧倒的にフィジカルな体験」でした。
+                        </p>
+                        <p>
+                            画面の中だけで完結するブランド体験は、指先ひとつでスキップされます。
+                            記憶に粘り着くのは、五感を使った体験だけ。
+                            私たちは原宿の路地裏にある倉庫を、ブランドカラーである「偏光パール」の光で満たし、
+                            "撮影せずにはいられない"、いいえ、"その場にいる自分を誰かに伝えたくなる" 空間を作り上げました。
+                        </p>
+                        <div class="pull-quote">
+                            「きれいな写真を撮らせる」のではない。<br>
+                            「撮っている自分が主役になる」舞台を作る。
+                        </div>
+                        <p>
+                            施工期間はわずか2日間。既存の什器は一切使わず、全てこのイベントのために設計されたオリジナル什器を使用。
+                            特にこだわったのは「光の反射角」。スマートフォンのカメラ越しに見た時に最も美しく肌が発光するよう、
+                            照明技師と何度も調整を重ねました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full bleeding image break -->
+            <img src="assets/img/service_promotion.jpg" alt="Venue Texture" class="visual-break">
+
+            <div class="l-container">
+                <!-- The Struggle (Human noise) -->
+                <div class="struggle-section">
+                    <div class="struggle-content">
+                        <h3 class="struggle-title">// BEHIND THE SCENES</h3>
+                        <p class="struggle-desc">
+                            開幕3時間前、メインのARサイネージが通信エラーでダウン。<br>
+                            現場は一瞬凍りつきましたが、バックアップ用に準備していた静的パネルへの切り替えと、
+                            エンジニアによる物理配線の見直しを並行して実施。
+                            開場15分前に復旧し、初回のデモプレイが成功した瞬間、スタッフ全員から小さな拍手が起きました。<br>
+                            「トラブルは起きるもの。大事なのはリカバリーの速さ」というハレトキの現場力が試された瞬間でした。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact (Asymmetric grid) -->
+                <div style="margin-bottom: 120px;">
+                    <h2 class="narrative-title" style="margin-bottom:60px;">Numbers</h2>
+                    <div class="impact-grid">
+                        <div>
+                            <span class="impact-num">5,240</span>
+                            <span class="impact-label">Total Instagram Posts (Targets: 3,000)</span>
+                            <p style="margin-top:24px; color:var(--c-slate-gray); font-size:0.9rem;">
+                                想定を大きく上回る投稿数。特にストーリーズでの動画投稿比率が60%を超え、
+                                「動く空間」としての演出が奏功しました。
+                            </p>
+                        </div>
+                        <div>
+                            <span class="impact-num">180min</span>
+                            <span class="impact-label">Max Waiting Time</span>
+                            <p style="margin-top:24px; color:var(--c-slate-gray); font-size:0.9rem;">
+                                初日から行列が発生。整理券システムの導入と、待機列へのドリンク配布（サンプリング兼）により、
+                                離脱率を5%以下に抑制することに成功。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-top:1px solid var(--c-line-gray); padding: 60px 0; text-align:center;">
+                    <a href="works.html" class="btn btn-secondary">BACK TO WORKS</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">HARETOKI</div>
+                    <p>株式会社ハレトキ・イベントデザイン<br>
+                        〒150-0000 東京都渋谷区○○ 1-2-3</p>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">実績</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 HARETOKI EVENT DESIGN, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

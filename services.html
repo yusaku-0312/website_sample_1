@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス一覧 | 株式会社ハレトキ・イベントデザイン</title>
+    <meta name="description"
+        content="ハレトキが提供するイベント企画・運営サービスの詳細です。企業イベント、プロモーション、地域イベント、オンライン配信など、目的と課題に合わせて最適なプランをご提案します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <style>
+        /* Service Page Specific Styles */
+        .page-header {
+            background-color: var(--c-midnight-blue);
+            color: #fff;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .service-nav {
+            background: #fff;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+            border-bottom: 1px solid #eee;
+            padding: 16px 0;
+        }
+
+        .service-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .service-nav a {
+            color: var(--c-midnight-blue);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .service-nav a:hover,
+        .service-nav a.is-active {
+            background-color: var(--c-soft-ivory);
+        }
+
+        @media(max-width: 768px) {
+            .service-nav ul {
+                gap: 12px;
+            }
+
+            .service-nav a {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+
+        .service-block {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--c-line-gray);
+        }
+
+        .service-block:last-child {
+            border-bottom: none;
+        }
+
+        .service-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .service-hero__img img {
+            width: 100%;
+            border-radius: var(--r-card);
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        @media(max-width: 768px) {
+            .service-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: var(--r-card);
+        }
+
+        .service-card__label {
+            color: var(--c-muted-amber);
+            font-weight: 700;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        @media(max-width: 768px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same as index) -->
+    <header class="header">
+        <div class="l-container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="company_logo.png" alt="HARETOKI">
+            </a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="process.html">進め方</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="height: 40px; padding: 0 20px; font-size: 14px;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="l-container">
+            <h1>提供サービス</h1>
+            <p>企業の課題解決から地域活性化まで。<br>「場」の設計を通じて、目的達成をサポートします。</p>
+        </div>
+    </div>
+
+    <div class="service-nav">
+        <div class="l-container">
+            <ul>
+                <li><a href="#corporate">企業イベント</a></li>
+                <li><a href="#promotion">プロモーション</a></li>
+                <li><a href="#local">地域・行政</a></li>
+                <li><a href="#online">オンライン・配信</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Corporate -->
+        <section id="corporate" class="service-block">
+            <div class="l-container">
+                <div class="service-hero">
+                    <div class="service-hero__text">
+                        <span style="color:var(--c-muted-amber); font-weight:700;">Corporate Event</span>
+                        <h2 class="mb-md text-left" style="text-align:left; margin-bottom:24px;">企業イベント</h2>
+                        <p>キックオフ、表彰式、周年記念式典など、社内向け（インナー）イベントの企画から当日運営までをトータルサポート。組織のエンゲージメント向上に貢献します。</p>
+                    </div>
+                    <div class="service-hero__img">
+                        <img src="assets/img/service_corporate.jpg" alt="Corporate Event">
+                    </div>
+                </div>
+
+                <div class="service-detail-grid">
+                    <div class="service-card">
+                        <span class="service-card__label">よくある課題</span>
+                        <h3 style="font-size:20px; margin-bottom:16px;">「マンネリ化」と「負担」</h3>
+                        <ul style="list-style:disc; margin-left:20px; color:var(--c-slate-gray);">
+                            <li>毎年同じ内容で、社員の反応が鈍い</li>
+                            <li>担当者が通常業務と兼任でパンク寸前</li>
+                            <li>効果が見えにくく、予算確保が難しい</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <span class="service-card__label">ハレトキの解決策</span>
+                        <h3 style="font-size:20px; margin-bottom:16px;">目的の再定義と「丸投げ」体制</h3>
+                        <ul style="list-style:disc; margin-left:20px; color:var(--c-slate-gray);">
+                            <li>「なぜやるか」から見直し、テーマ性を付与</li>
+                            <li>会場手配から台本作成まで一括代行</li>
+                            <li>参加者の「顔」が見える演出設計</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion -->
+        <section id="promotion" class="service-block" style="background:#fff;">
+            <div class="l-container">
+                <div class="service-hero">
+                    <div class="service-hero__img">
+                        <img src="assets/img/service_promotion.jpg" alt="Promotion Event">
+                    </div>
+                    <div class="service-hero__text">
+                        <span style="color:var(--c-muted-amber); font-weight:700;">Promotion</span>
+                        <h2 class="mb-md text-left" style="text-align:left; margin-bottom:24px;">プロモーション・PR</h2>
+                        <p>新商品発表会、POPUPストア、メディア内覧会など。ブランドの世界観を体現し、SNSやメディアでの拡散を狙う「体験」を設計します。</p>
+                    </div>
+                </div>
+                <div class="service-detail-grid">
+                    <div class="service-card" style="background:var(--c-soft-ivory);">
+                        <span class="service-card__label">提供内容</span>
+                        <ul style="list-style:disc; margin-left:20px;">
+                            <li>空間デザイン・施工管理</li>
+                            <li>フォトスポット設計</li>
+                            <li>メディア対応・受付フロー構築</li>
+                            <li>インフルエンサーアテンド補助</li>
+                        </ul>
+                    </div>
+                    <div class="service-card" style="background:var(--c-soft-ivory);">
+                        <span class="service-card__label">成果例（サンプル）</span>
+                        <ul style="list-style:disc; margin-left:20px;">
+                            <li>SNS投稿数：前年比 150%アップ</li>
+                            <li>メディア掲載：TV 2番組 / Web 15媒体</li>
+                            <li>来場者満足度：98%（アンケート結果）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local -->
+        <section id="local" class="service-block">
+            <div class="l-container">
+                <div class="service-hero">
+                    <div class="service-hero__text">
+                        <span style="color:var(--c-muted-amber); font-weight:700;">Local & Public</span>
+                        <h2 class="mb-md text-left" style="text-align:left; margin-bottom:24px;">地域・行政イベント</h2>
+                        <p>自治体主催の祭り、観光キャンペーン、マルシェなど。多くのステークホルダー（住民、出店者、行政）との調整を円滑に行い、事故のない安全な運営を実現します。</p>
+                    </div>
+                    <div class="service-hero__img">
+                        <img src="assets/img/service_local.jpg" alt="Local Event">
+                    </div>
+                </div>
+                <div class="service-detail-grid">
+                    <div class="service-card">
+                        <h3 style="font-size:20px; margin-bottom:16px;">こんな不安を解消します</h3>
+                        <p class="mb-sm"><strong>「警備や誘導が不安」</strong><br>→ 警察・消防との協議資料作成から、当日の警備計画までプロが策定します。</p>
+                        <p><strong>「出店者管理が大変」</strong><br>→ 募集事務局の代行、説明会運営、搬入出計画の作成までサポート可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online -->
+        <section id="online" class="service-block" style="background:#fff;">
+            <div class="l-container">
+                <div class="service-hero">
+                    <div class="service-hero__img">
+                        <img src="assets/img/service_online.jpg" alt="Online Event">
+                    </div>
+                    <div class="service-hero__text">
+                        <span style="color:var(--c-muted-amber); font-weight:700;">Online & Hybrid</span>
+                        <h2 class="mb-md text-left" style="text-align:left; margin-bottom:24px;">オンライン・ハイブリッド</h2>
+                        <p>Zoom/YouTube Live等を用いたウェビナーや、リアル会場とのハイブリッド開催。通信トラブルのリスクを最小限に抑え、クリアな映像・音声で配信します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">HARETOKI</div>
+                    <p>株式会社ハレトキ・イベントデザイン</p>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">実績</a></li>
+                        <li><a href="process.html">進め方</a></li>
+                        <li><a href="pricing.html">料金</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 HARETOKI EVENT DESIGN, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>実績一覧 | 株式会社ハレトキ・イベントデザイン</title>
+    <meta name="description" content="ハレトキのイベント企画・運営実績をご紹介します。企業イベント、プロモーション、地域イベントなど、様々な事例をご覧いただけます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <style>
+        .page-header {
+            background-color: var(--c-midnight-blue);
+            color: #fff;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        /* Filter UI */
+        .works-filter {
+            padding: 40px 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-list {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: 1px solid var(--c-line-gray);
+            background: #fff;
+            color: var(--c-midnight-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.is-active {
+            background: var(--c-midnight-blue);
+            color: #fff;
+            border-color: var(--c-midnight-blue);
+        }
+
+        .works-grid {
+            padding: 60px 0;
+        }
+
+        .work-item {
+            display: block;
+            /* for link */
+            opacity: 1;
+            /* for filter animation if added */
+            transition: opacity 0.3s;
+        }
+
+        .work-item.is-hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .work-thumb {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--c-line-gray);
+        }
+
+        .work-content {
+            padding: 24px;
+        }
+
+        .work-tag {
+            font-size: 12px;
+            background: #F4F3EF;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: var(--c-midnight-blue);
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="l-container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="company_logo.png" alt="HARETOKI">
+            </a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="process.html">進め方</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="height: 40px; padding: 0 20px; font-size: 14px;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="l-container">
+            <h1>実績一覧</h1>
+            <p>過去にお手伝いしたプロジェクトの一部をご紹介します。</p>
+        </div>
+    </div>
+
+    <div class="works-filter">
+        <div class="l-container">
+            <div class="filter-list">
+                <button class="filter-btn is-active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="corporate">企業イベント</button>
+                <button class="filter-btn" data-filter="promotion">プロモーション</button>
+                <button class="filter-btn" data-filter="local">地域・行政</button>
+                <button class="filter-btn" data-filter="online">オンライン</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="works-grid">
+        <div class="l-container">
+            <div class="l-grid-3" id="works-container">
+                <!-- Work 1 -->
+                <a href="works-detail.html" class="card work-item" data-category="corporate"
+                    style="padding:0; overflow:hidden;">
+                    <img src="assets/img/work01_thumb.jpg" alt="Work 01" class="work-thumb">
+                    <div class="work-content">
+                        <span class="work-tag">企業イベント</span>
+                        <h3 style="font-size:18px; margin: 12px 0;">株式会社A社 創立50周年記念式典</h3>
+                        <p style="font-size:14px; color:var(--c-slate-gray);">500名 / ホテル開催</p>
+                        <p style="font-size:14px; margin-top:16px;">
+                            <strong>課題：</strong>マンネリ化からの脱却<br><strong>結果：</strong>参加率120%達成（前年比）
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Work 2 -->
+                <a href="work_detail_2.html" class="card work-item" data-category="promotion"
+                    style="padding:0; overflow:hidden;">
+                    <img src="assets/img/work02_thumb.jpg" alt="Work 02" class="work-thumb">
+                    <div class="work-content">
+                        <span class="work-tag">プロモーション</span>
+                        <h3 style="font-size:18px; margin: 12px 0;">新コスメブランド「LUMIERE」ローンチ</h3>
+                        <p style="font-size:14px; color:var(--c-slate-gray);">3,000名 / 原宿POPUP</p>
+                        <p style="font-size:14px; margin-top:16px;">
+                            <strong>課題：</strong>SNS拡散の仕掛け<br><strong>結果：</strong>Instagram投稿 5,000件超
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Work 3 -->
+                <a href="works-detail.html" class="card work-item" data-category="local"
+                    style="padding:0; overflow:hidden;">
+                    <img src="assets/img/work03_thumb.jpg" alt="Work 03" class="work-thumb">
+                    <div class="work-content">
+                        <span class="work-tag">地域・行政</span>
+                        <h3 style="font-size:18px; margin: 12px 0;">〇〇市 秋の観光フェスティバル</h3>
+                        <p style="font-size:14px; color:var(--c-slate-gray);">20,000名 / 野外公園</p>
+                        <p style="font-size:14px; margin-top:16px;">
+                            <strong>課題：</strong>広域からの集客<br><strong>結果：</strong>県外来訪者30%増
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Work 4 (Dummy) -->
+                <a href="work_detail_2.html" class="card work-item" data-category="online"
+                    style="padding:0; overflow:hidden;">
+                    <img src="assets/img/work04_thumb.jpg" alt="Work 04" class="work-thumb">
+                    <div class="work-content">
+                        <span class="work-tag">オンライン</span>
+                        <h3 style="font-size:18px; margin: 12px 0;">グローバル経営方針発表会</h3>
+                        <p style="font-size:14px; color:var(--c-slate-gray);">1,200名 / Zoom + 配信</p>
+                        <p style="font-size:14px; margin-top:16px;">
+                            <strong>課題：</strong>多言語対応と安定性<br><strong>結果：</strong>トラブル0で完了
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Work 5 (Dummy) -->
+                <a href="works-detail.html" class="card work-item" data-category="corporate"
+                    style="padding:0; overflow:hidden;">
+                    <img src="assets/img/work05_thumb.jpg" alt="Work 05" class="work-thumb">
+                    <div class="work-content">
+                        <span class="work-tag">企業イベント</span>
+                        <h3 style="font-size:18px; margin: 12px 0;">社員総会「THE DAY 2024」</h3>
+                        <p style="font-size:14px; color:var(--c-slate-gray);">300名 / ホール</p>
+                        <p style="font-size:14px; margin-top:16px;">
+                            <strong>課題：</strong>一体感の醸成<br><strong>結果：</strong>満足度4.8/5.0
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">HARETOKI</div>
+                    <p>株式会社ハレトキ・イベントデザイン</p>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">実績</a></li>
+                        <li><a href="process.html">進め方</a></li>
+                        <li><a href="pricing.html">料金</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 HARETOKI EVENT DESIGN, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple filter script for works page
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.work-item');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update buttons
+                    buttons.forEach(b => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filter === 'all' || filter === category) {
+                            item.classList.remove('is-hidden');
+                        } else {
+                            item.classList.add('is-hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

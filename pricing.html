@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料金プラン | 株式会社ハレトキ・イベントデザイン</title>
+    <meta name="description" content="ハレトキの料金プランのご案内です。ご予算や規模に合わせた3つの目安プランと、費用に含まれるもの・含まれないものを明確にご提示します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <style>
+        .page-header {
+            background-color: var(--c-midnight-blue);
+            color: #fff;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .price-card {
+            background: #fff;
+            border-radius: var(--r-card);
+            padding: 40px 24px;
+            border: 1px solid var(--c-line-gray);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .price-card.is-recommended {
+            border-color: var(--c-muted-amber);
+            border-width: 2px;
+            box-shadow: 0 8px 24px rgba(200, 146, 61, 0.15);
+        }
+
+        .reco-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--c-muted-amber);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .price-name {
+            font-size: 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: var(--c-midnight-blue);
+        }
+
+        .price-amount {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--c-charcoal);
+        }
+
+        .price-unit {
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 4px;
+        }
+
+        .price-desc {
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+            color: var(--c-slate-gray);
+        }
+
+        .price-list {
+            margin-top: auto;
+            border-top: 1px solid #eee;
+            padding-top: 24px;
+        }
+
+        .price-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            padding-left: 1.2em;
+            position: relative;
+        }
+
+        .price-list li::before {
+            content: "・";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Included / Not Included */
+        .cost-detail {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--r-card);
+        }
+
+        .cost-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .cost-group h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--c-line-gray);
+            padding-bottom: 8px;
+        }
+
+        .cost-group.included h3 {
+            border-color: var(--c-midnight-blue);
+        }
+
+        .cost-group.excluded h3 {
+            border-color: var(--c-muted-amber);
+        }
+
+        @media(max-width: 768px) {
+            .price-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cost-cols {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="l-container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="company_logo.png" alt="HARETOKI">
+            </a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="height: 40px; padding: 0 20px; font-size: 14px;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="l-container">
+            <h1>料金プラン（目安）</h1>
+            <p>ご予算に応じた3つのモデルプランをご用意。<br>お客様の課題に合わせてカスタマイズいたします。</p>
+        </div>
+    </div>
+
+    <main class="l-section">
+        <div class="l-container">
+
+            <div class="price-grid">
+                <!-- Light -->
+                <div class="price-card">
+                    <h3 class="price-name">ライト</h3>
+                    <div class="price-amount">60<span class="price-unit">万円〜</span></div>
+                    <p class="price-desc">小規模な社内イベントや<br>シンプルな進行の会合に</p>
+                    <ul class="price-list">
+                        <li>企画構成案作成</li>
+                        <li>進行台本作成</li>
+                        <li>当日ディレクター 1名</li>
+                        <li>進行スタッフ 2名</li>
+                    </ul>
+                </div>
+
+                <!-- Standard -->
+                <div class="price-card is-recommended">
+                    <span class="reco-badge">RECOMMENDED</span>
+                    <h3 class="price-name">スタンダード</h3>
+                    <div class="price-amount">150<span class="price-unit">万円〜</span></div>
+                    <p class="price-desc">演出を含む企業イベントや<br>一般的なプロモーションに</p>
+                    <ul class="price-list">
+                        <li>詳細企画・演出・空間プラン</li>
+                        <li>進行台本・マニュアル作成</li>
+                        <li>当日統括ディレクター 1名</li>
+                        <li>進行・誘導スタッフ 4名〜</li>
+                        <li>音響・映像オペレーター手配</li>
+                    </ul>
+                </div>
+
+                <!-- Premium -->
+                <div class="price-card">
+                    <h3 class="price-name">プレミアム</h3>
+                    <div class="price-amount">300<span class="price-unit">万円〜</span></div>
+                    <p class="price-desc">大規模な式典、フェス、<br>ハイブリッド開催など</p>
+                    <ul class="price-list">
+                        <li>総合プロデュース</li>
+                        <li>会場選定・交渉代行</li>
+                        <li>タレント・ゲスト出演交渉</li>
+                        <li>警備・安全管理計画</li>
+                        <li>オンライン配信設計</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cost-detail">
+                <h2 class="text-center mb-lg" style="font-size:24px;">費用に含まれるもの・別途になるもの</h2>
+                <div class="cost-cols">
+                    <div class="cost-group included">
+                        <h3>プランに含まれる基本費用</h3>
+                        <ul class="price-list" style="border:none;">
+                            <li>専門チームによる企画・提案料</li>
+                            <li>制作進行管理費（ディレクション費）</li>
+                            <li>基本ドキュメント作成（台本・マニュアル）</li>
+                            <li>当日運営人件費（プラン規定人数）</li>
+                            <li>事後レポート作成</li>
+                        </ul>
+                    </div>
+                    <div class="cost-group excluded">
+                        <h3>状況に応じて別途となる実費</h3>
+                        <ul class="price-list" style="border:none;">
+                            <li>会場費、会場付帯設備費</li>
+                            <li>ケータリング（飲食）費</li>
+                            <li>外部機材費（特殊照明、大型LEDなど）</li>
+                            <li>制作物実費（看板、ノベルティ、映像制作）</li>
+                            <li>タレント・司会者・ゲスト出演料</li>
+                            <li>遠方開催時の交通宿泊費</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center" style="margin-top:40px; color:var(--c-slate-gray); font-size:14px;">
+                    ※上記はあくまで目安です。詳細はお見積りにて明確にご提示します。</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">HARETOKI</div>
+                    <p>株式会社ハレトキ・イベントデザイン<br>
+                        〒150-0000 東京都渋谷区○○ 1-2-3</p>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">実績</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 HARETOKI EVENT DESIGN, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

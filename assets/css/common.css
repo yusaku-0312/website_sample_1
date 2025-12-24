@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+:root {
+    /* Colors - Urban Dark Tone x Soft Neutral */
+    --color-midnight: #1C2431;
+    /* Header, Headings */
+    --color-ivory: #F4F3EF;
+    /* Background */
+    --color-amber: #C8923D;
+    /* Accent */
+    --color-slate: #8A9099;
+    /* Subtext */
+    --color-charcoal: #2B2E34;
+    /* Body Text */
+    --color-line: #DADDD8;
+    /* Borders */
+    --color-white: #FFFFFF;
+    /* Cards, Sections */
+
+    /* Typography */
+    --font-base: "Noto Sans JP", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Layout */
+    --width-container: 1100px;
+    --header-height: 80px;
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 64px;
+    --space-xl: 120px;
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-card: 12px;
+    --radius-full: 9999px;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+body {
+    font-family: var(--font-base);
+    color: var(--color-charcoal);
+    background-color: var(--color-ivory);
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Layout Utils
+   ========================================================================== */
+.container {
+    max-width: var(--width-container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hidden-pc {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .hidden-pc {
+        display: block !important;
+    }
+
+    .hidden-sp {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+/* Buttons */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-amber);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    padding: 16px 40px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(200, 146, 61, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #B07D2E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(200, 146, 61, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-midnight);
+    color: var(--color-midnight);
+    border-radius: var(--radius-full);
+    padding: 14px 38px;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-midnight);
+    color: var(--color-white);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    /* Initial state on dark hero usually, but specific to page. */
+}
+
+/* Specific Header states */
+/* On Index/Pages with dark hero, it might start transparent. 
+   But for simplified implementation, let's use Midnight Blue by default or specific overrides.
+   Actually, commonly we want a dark header.
+*/
+.header {
+    background-color: var(--color-midnight);
+}
+
+.header.is-scrolled {
+    background-color: rgba(28, 36, 49, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.header-nav a {
+    font-size: 0.95rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+}
+
+/* Hamburger */
+.hamburger-btn {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 10px;
+    transition: 0.3s;
+}
+
+.hamburger-line:nth-child(1) {
+    top: 14px;
+}
+
+.hamburger-line:nth-child(2) {
+    top: 21px;
+}
+
+.hamburger-line:nth-child(3) {
+    top: 28px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background-color: var(--color-midnight);
+    color: var(--color-white);
+    padding: 80px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-logo img {
+    height: 32px;
+    width: auto;
+    margin-bottom: 24px;
+    filter: brightness(0) invert(1);
+    /* Ensure white logo */
+}
+
+.footer-address {
+    font-size: 0.9rem;
+    color: var(--color-slate);
+    line-height: 2;
+}
+
+.footer-links-title {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 24px;
+    color: var(--color-white);
+}
+
+.footer-links ul li {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: var(--color-slate);
+}
+
+.footer-links a:hover {
+    color: var(--color-amber);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-slate);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .header-nav {
+        /* Mobile Menu implementation needed explicitly if not just "hidden" */
+        display: none;
+        /* Simplification for recovery, normally main.js handles open state */
+    }
+
+    /* When active class added by JS */
+    .header-nav.is-active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-midnight);
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .header-nav.is-active ul {
+        flex-direction: column;
+    }
+}

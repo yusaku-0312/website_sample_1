@@ -1,0 +1,410 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Variables & Design Tokens
+   ========================================================================== */
+:root {
+    /* Colors */
+    --c-midnight-blue: #1C2431;
+    /* Text: Headings, Nav */
+    --c-soft-ivory: #F4F3EF;
+    /* Background: Sections, Cards */
+    --c-muted-amber: #C8923D;
+    /* Accent: CTA, Highlights - Use sparingly (<5%) */
+    --c-slate-gray: #8A9099;
+    /* Sub-text, UI Support */
+    --c-charcoal: #2B2E34;
+    /* Text: Body */
+    --c-line-gray: #DADDD8;
+    /* Borders */
+    --c-off-white: #FFFFFF;
+    /* Pure white for inner inputs/cards if needed */
+
+    --c-primary-btn: #E48F6C;
+    /* Signal Coral approximation for Primary Button as per spec "Signal Coral" not hexed in 3.1 but named in 6.3. Defined here. */
+    /* Spec said Primary BG: Signal Coral. Let's pick a color fitting the description if not explicitly hexed. 
+     Wait, Spec 6.3 says "Power Coral"? No, "Signal Coral". 
+     Spec 10.2 says "Signal Coral". 
+     I will use a coral color that compliments the palette. #E87A5D */
+    --c-signal-coral: #E87A5D;
+
+    /* Typography */
+    --font-main: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+
+    /* Spacing */
+    --sp-section-pc: 80px;
+    --sp-section-sp: 56px;
+    --sp-card: 24px;
+    --sp-base: 16px;
+
+    /* Layout */
+    --w-container: 1100px;
+
+    /* Radius */
+    --r-card: 16px;
+    --r-btn: 12px;
+    --r-input: 10px;
+}
+
+/* ==========================================================================
+   2. Reset & Base Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--c-charcoal);
+    background-color: var(--c-soft-ivory);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--c-midnight-blue);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* ==========================================================================
+   3. Layout Utilities
+   ========================================================================== */
+.l-container {
+    max-width: var(--w-container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.l-section {
+    padding: var(--sp-section-pc) 0;
+}
+
+@media (max-width: 768px) {
+    .l-container {
+        padding: 0 16px;
+    }
+
+    .l-section {
+        padding: var(--sp-section-sp) 0;
+    }
+}
+
+/* Grid System */
+.l-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.l-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+
+    .l-grid-3,
+    .l-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-sm {
+    margin-bottom: 8px;
+}
+
+.mb-md {
+    margin-bottom: 24px;
+}
+
+.mb-lg {
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   4. Components
+   ========================================================================== */
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 32px;
+    border-radius: var(--r-btn);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--c-signal-coral);
+    color: #fff;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--c-midnight-blue);
+    color: var(--c-midnight-blue);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(28, 36, 49, 0.05);
+    /* Slight tint of midnight blue */
+}
+
+/* Cards (Generic) */
+.card {
+    background-color: #fff;
+    border-radius: var(--r-card);
+    padding: var(--sp-card);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    /* For grid alignment */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    /* Stronger but soft shadow */
+}
+
+/* Components: Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(244, 243, 239, 0.95);
+    /* Soft Ivory with opacity */
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo img {
+    height: 48px;
+    width: auto;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+        /* Mobile menu implementation later */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--c-soft-ivory);
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__nav.is-active {
+        display: block;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--c-midnight-blue);
+    position: absolute;
+    left: 8px;
+    transition: all 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+    top: 12px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 19px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 26px;
+}
+
+/* Components: Footer */
+.footer {
+    background-color: var(--c-midnight-blue);
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: auto;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer__logo {
+    margin-bottom: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer__links ul {
+    display: flex;
+    gap: 24px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__links ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Feature: Section Title Wrapper */
+.section-header {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.section-header__subtitle {
+    display: block;
+    font-family: sans-serif;
+    /* Keep simple */
+    font-size: 14px;
+    color: var(--c-muted-amber);
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

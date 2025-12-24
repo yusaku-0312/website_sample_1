@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Services Page Styles
+   ========================================================================== */
+
+.page-header-services {
+    background-color: var(--color-midnight);
+    padding: 120px 0 60px;
+    text-align: center;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Radial gradient accent */
+.page-header-services::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200, 146, 61, 0.2) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.page-header-services .container {
+    position: relative;
+    z-index: 1;
+}
+
+.service-intro {
+    padding: 80px 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-detail-section {
+    padding: 100px 0;
+}
+
+.service-detail-section:nth-child(odd) {
+    background-color: var(--color-ivory);
+}
+
+.service-detail-section:nth-child(even) {
+    background-color: var(--color-white);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.service-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-amber);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.service-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-midnight);
+}
+
+.service-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.service-description h3 {
+    font-size: 1.25rem;
+    color: var(--color-midnight);
+    margin-bottom: 24px;
+    font-weight: 700;
+    border-left: 4px solid var(--color-amber);
+    padding-left: 16px;
+}
+
+.problem-solution {
+    background: var(--color-white);
+    padding: 32px;
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 32px;
+}
+
+.ps-item {
+    margin-bottom: 16px;
+}
+
+.ps-label {
+    font-weight: 700;
+    color: var(--color-midnight);
+    margin-right: 8px;
+}
+
+.service-image img {
+    border-radius: var(--radius-card);
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .service-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

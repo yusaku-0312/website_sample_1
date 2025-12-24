@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進め方 | 株式会社ハレトキ・イベントデザイン</title>
+    <meta name="description" content="ハレトキのイベント制作フローをご紹介します。お問い合わせから事後レポートまで、9つのステップで着実に進行します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <style>
+        .page-header {
+            background-color: var(--c-midnight-blue);
+            color: #fff;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .process-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50px;
+            height: 100%;
+            width: 2px;
+            background: var(--c-line-gray);
+            z-index: 0;
+        }
+
+        .process-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding-left: 100px;
+        }
+
+        .process-num {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--c-midnight-blue);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 0 0 8px var(--c-soft-ivory);
+            /* mask line */
+            z-index: 1;
+        }
+
+        .process-content {
+            background: #fff;
+            padding: 32px;
+            border-radius: var(--r-card);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-content h3 {
+            font-size: 20px;
+            color: var(--c-midnight-blue);
+            margin-bottom: 16px;
+        }
+
+        /* Additional Costs Box */
+        .note-box {
+            background: #fff;
+            border: 2px solid var(--c-line-gray);
+            padding: 40px;
+            border-radius: var(--r-card);
+            margin-top: 60px;
+        }
+
+        .note-box h3 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 24px;
+            color: var(--c-midnight-blue);
+        }
+
+        .note-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .note-list li {
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        .note-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--c-muted-amber);
+            font-weight: bold;
+        }
+
+        @media(max-width: 768px) {
+            .process-timeline::before {
+                left: 20px;
+            }
+
+            .process-item {
+                padding-left: 60px;
+            }
+
+            .process-num {
+                left: 0;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                box-shadow: 0 0 0 4px var(--c-soft-ivory);
+            }
+
+            .note-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="l-container header__inner">
+            <a href="index.html" class="header__logo">
+                <img src="company_logo.png" alt="HARETOKI">
+            </a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="pricing.html">料金</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="height: 40px; padding: 0 20px; font-size: 14px;">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="l-container">
+            <h1>制作の流れ</h1>
+            <p>ご相談からイベント当日、事後レポート提出まで。<br>安心の9ステップで進行します。</p>
+        </div>
+    </div>
+
+    <main class="l-section">
+        <div class="l-container">
+            <div class="process-timeline">
+                <!-- 1 -->
+                <div class="process-item">
+                    <div class="process-num">01</div>
+                    <div class="process-content">
+                        <h3>お問い合わせ</h3>
+                        <p>フォームよりご連絡ください。実施時期や内容が未定でも構いません。「何を目的とするか」から一緒に整理しましょう。</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="process-item">
+                    <div class="process-num">02</div>
+                    <div class="process-content">
+                        <h3>ヒアリング・初回打ち合わせ</h3>
+                        <p>Web会議または訪問にて、詳細をヒアリングします。参加者層、抱えている課題、ご予算感などをお聞かせください。</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="process-item">
+                    <div class="process-num">03</div>
+                    <div class="process-content">
+                        <h3>企画提案・概算見積もり</h3>
+                        <p>コンセプトや会場案、当日の構成案をご提案します。同時に概算のお見積りを提示し、増減の可能性についてもご説明します。</p>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="process-item">
+                    <div class="process-num">04</div>
+                    <div class="process-content">
+                        <h3>ご契約・制作開始</h3>
+                        <p>提案内容にご納得いただけましたら契約締結となります。制作チームを発足し、詳細設計に入ります。</p>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="process-item">
+                    <div class="process-num">05</div>
+                    <div class="process-content">
+                        <h3>詳細設計・制作</h3>
+                        <p>進行台本、映像、スライド、装飾プランなどの制作物を具体化します。定例ミーティングで進捗を共有します。</p>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="process-item">
+                    <div class="process-num">06</div>
+                    <div class="process-content">
+                        <h3>運営マニュアル作成</h3>
+                        <p>当日のスタッフ配置、緊急連絡体制、避難誘導計画などをまとめたマニュアルを作成し、全スタッフに共有します。</p>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="process-item">
+                    <div class="process-num">07</div>
+                    <div class="process-content">
+                        <h3>リハーサル</h3>
+                        <p>進行の確認、機材チェック、出演者の導線確認などを行います。トラブルを未然に防ぐ重要な工程です。</p>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="process-item">
+                    <div class="process-num">08</div>
+                    <div class="process-content">
+                        <h3>イベント本番</h3>
+                        <p>統括ディレクターを中心に、安全かつ円滑に運営します。不測の事態にも迅速に対応します。</p>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="process-item">
+                    <div class="process-num">09</div>
+                    <div class="process-content">
+                        <h3>事後レポート提出</h3>
+                        <p>参加人数、アンケート結果、当日の写真などをまとめたレポートを提出します。次回に向けた改善点も共有します。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <h3>透明性を大切にしています</h3>
+                <p class="text-center mb-md">見積もり後に「よくある追加費用」が発生するケース（例）</p>
+                <ul class="note-list">
+                    <li>参加人数の大幅な増加による備品・飲食の追加</li>
+                    <li>会場変更に伴うキャンセル料や差額</li>
+                    <li>当初想定になかった著名ゲストの出演料</li>
+                    <li>特殊な演出機材の追加</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">HARETOKI</div>
+                    <p>株式会社ハレトキ・イベントデザイン<br>
+                        〒150-0000 東京都渋谷区○○ 1-2-3</p>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">実績</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 HARETOKI EVENT DESIGN, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
